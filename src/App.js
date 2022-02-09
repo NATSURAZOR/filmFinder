@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Nav from "./Nav/Nav";
 import Home from "./Search/FindMovie";
-import About from "./AboutTheFilm/AboutTheMovie";
+import Detail from "./Movie Detail/MoiveDetail";
 import Favorite from "./Favorites/Favorites";
 import "./App.css";
 import "./Nav/Nav.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <div className="App">
+    <div className="App">
+      <Router>
         <Nav />
-        <Route path="/" element={Home} />
-        <Route path="/movie/:id" element={About} />
-        <Route path="/my-favorites" element={Favorite} />
-      </div>
-    </Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:id" element={<Detail />} />
+          <Route path="/my-favorites" element={<Favorite />} />
+        </Routes>
+      </Router>
+    </div>
   );
-};
+}
 
 export default App;

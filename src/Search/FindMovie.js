@@ -7,7 +7,8 @@ const result = (movies) => {
       <div className="movies">
         {movies.map((movie) => (
           <Movie
-            key={movie.Title}
+            key={movie.imdbID}
+            itemID={movie.imdbID}
             title={movie.Title}
             year={movie.Year}
             image={movie.Poster}
@@ -41,7 +42,7 @@ const Home = () => {
     );
     const data = await response.json();
     setMovies(data.Search);
-    console.log(data.Search);
+    console.log(data);
   };
 
   const updateSearch = (e) => {

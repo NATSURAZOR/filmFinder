@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav>
       <ul>
-        <li>Search Movie</li>
-        <li>Favorites</li>
+        <Link to="/">
+          <li>Search Movie</li>
+        </Link>
+        <Link to="/my-favorites">
+          <li>Favorites</li>
+        </Link>
       </ul>
     </nav>
   );
