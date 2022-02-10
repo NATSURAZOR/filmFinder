@@ -29,8 +29,6 @@ export const GlobalProvider = (props) => {
     dispatch({ type: "REMOVE_MOVIE_FROM_FAVORITES", payload: id });
   };
 
-  console.log(state);
-
   return (
     <GlobalContext.Provider
       value={{

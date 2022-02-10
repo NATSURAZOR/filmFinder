@@ -42,7 +42,6 @@ const Home = () => {
     );
     const data = await response.json();
     setMovies(data.Search);
-    console.log(data);
   };
 
   const updateSearch = (e) => {
@@ -54,6 +53,8 @@ const Home = () => {
     setQuery(search);
     setSearch("");
   };
+
+  console.log(movies);
 
   return (
     <div className="search">
