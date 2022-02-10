@@ -6,19 +6,22 @@ import Favorite from "./Favorites/Favorites";
 import "./App.css";
 import "./Nav/Nav.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GlobalProvider } from "./Favorites/GlobalState";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movie/:id" element={<Detail />} />
-          <Route path="/my-favorites" element={<Favorite />} />
-        </Routes>
-      </Router>
-    </div>
+    <GlobalProvider>
+      <div className="App">
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:id" element={<Detail />} />
+            <Route path="/my-favorites" element={<Favorite />} />
+          </Routes>
+        </Router>
+      </div>
+    </GlobalProvider>
   );
 }
 
