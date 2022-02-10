@@ -54,8 +54,6 @@ const Home = () => {
     setSearch("");
   };
 
-  console.log(movies);
-
   return (
     <div className="search">
       <h1>Find Your Movie</h1>
