@@ -42,7 +42,6 @@ const Home = () => {
     );
     const data = await response.json();
     setMovies(data.Search);
-    console.log(data);
   };
 
   const updateSearch = (e) => {

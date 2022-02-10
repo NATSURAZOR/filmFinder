@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../Favorites/GlobalState";
 import { MovieControls } from "../Favorites/MovieControls";
+import { AllDetails } from "./ContentDetail";
 
 const Content = ({ movieData }) => {
   const { addMovieToFavorites, favorites } = useContext(GlobalContext);
@@ -11,7 +12,6 @@ const Content = ({ movieData }) => {
 
   const title = `${movieData.Title}`;
   const poster = `${movieData.Poster}`;
-  const ratings = movieData.Ratings;
 
   return (
     <div>
@@ -29,14 +29,7 @@ const Content = ({ movieData }) => {
       <div className="movie-detal-image-section">
         <img src={poster} alt="" />
       </div>
-      <div className="movie-detal-about-section">
-        {Object.keys(movieData).map((element) => (
-          <div key={element} className="movie-detail-key-and-value">
-            <p className="movie-detail-key">{`${element}`}</p>
-            <p className="movie-detail-value">{`${movieData[element]}`}</p>
-          </div>
-        ))}
-      </div>
+      <AllDetails key={"details"} movieData={movieData} />
     </div>
   );
 };
