@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Content from "./Content";
 
-function Detail() {
+const Detail = () => {
   const API_KEY = "dff14555";
   let { id } = useParams();
 
@@ -16,14 +17,14 @@ function Detail() {
       `http://www.omdbapi.com/?i=${id}&&apikey=${API_KEY}`
     );
     const item = await fetchItem.json();
-    console.log(item);
+    setItem(item);
   };
 
   return (
-    <div>
-      <h1>Information about the movie</h1>
+    <div className="movie-detail">
+      <Content movieData={item} />
     </div>
   );
-}
+};
 
 export default Detail;
