@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Movie from "./Movie";
+import Pagination from "./Pagination";
 
 const result = (movies) => {
   try {
@@ -31,17 +32,26 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [moviesPerPage] = useState(10);
+  const [totalMovies, setTotalMovies] = useState(0);
 
   useEffect(() => {
     getMovies();
+    setCurrentPage(1);
   }, [query]);
+
+  useEffect(() => {
+    getMovies();
+  }, [currentPage]);
 
   const getMovies = async () => {
     const response = await fetch(
-      `http://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`
+      `http://www.omdbapi.com/?s=${query}&apikey=${API_KEY}&page=${currentPage}`
     );
     const data = await response.json();
     setMovies(data.Search);
+    setTotalMovies(data.totalResults);
   };
 
   const updateSearch = (e) => {
@@ -54,7 +64,7 @@ const Home = () => {
     setSearch("");
   };
 
-  console.log(movies);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="search">
@@ -71,6 +81,15 @@ const Home = () => {
         </button>
       </form>
       {result(movies)}
+      <div className="pages">
+        <Pagination
+          moviesPerPage={moviesPerPage}
+          totalMovies={totalMovies}
+          paginate={paginate}
+          currentPage={currentPage}
+          totalPages={Math.ceil(totalMovies / moviesPerPage)}
+        />
+      </div>
     </div>
   );
 };
