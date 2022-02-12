@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Movie from "./Movie";
 import Pagination from "./Pagination";
+import { FaSearch } from "react-icons/fa";
 
 const result = (movies) => {
   try {
@@ -20,7 +21,12 @@ const result = (movies) => {
   } catch (err) {
     return (
       <div>
-        <h1>Not Founded</h1>
+        <img
+          src={process.env.PUBLIC_URL + "/images/no-data-dude.png"}
+          alt=""
+          className="no-data-image"
+        />
+        <h2>No Data Dude</h2>
       </div>
     );
   }
@@ -77,7 +83,7 @@ const Home = () => {
           onChange={updateSearch}
         />
         <button className="search-button" type="submit">
-          &#128269;
+          <FaSearch />
         </button>
       </form>
       {result(movies)}

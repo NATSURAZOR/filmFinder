@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "./GlobalState";
+import { MdDelete } from "react-icons/md";
 
 export const MovieControls = ({ disabled, movie }) => {
   const { removeMovieFromFavorites } = useContext(GlobalContext);
@@ -11,7 +12,7 @@ export const MovieControls = ({ disabled, movie }) => {
         disabled={disabled}
         className="control-btn"
       >
-        X
+        <MdDelete className="fidelete" />
       </button>
     </div>
   );

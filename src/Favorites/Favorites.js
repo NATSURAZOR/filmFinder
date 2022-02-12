@@ -7,12 +7,12 @@ export const Favorite = () => {
   const { favorites } = useContext(GlobalContext);
 
   return (
-    <div>
-      <h1>Your Favorite movies</h1>
+    <div className="search">
+      <h1 className="fav-h1">Your Favorite movies</h1>
       {favorites.length > 0 ? (
-        <div>
+        <div className="movies">
           {favorites.map((movie) => (
-            <div key={movie.imdbID}>
+            <div className="fav-movie" key={movie.imdbID}>
               <Movie
                 itemID={movie.imdbID}
                 title={movie.Title}

@@ -17,7 +17,16 @@ export const PaginationButtons = ({
           number === currentPage - 1 ||
           number === currentPage - 2 ||
           number === totalPages ? (
-            <button onClick={() => paginate(number)}>{number}</button>
+            <button
+              className={
+                currentPage === number
+                  ? "page-button active-button"
+                  : "page-button"
+              }
+              onClick={() => paginate(number)}
+            >
+              {number}
+            </button>
           ) : (
             <></>
           )}

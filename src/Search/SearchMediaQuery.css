@@ -1,0 +1,13 @@
+@media screen and (max-width: 850px) {
+  .search {
+    width: 100%;
+  }
+
+  .movies {
+    width: 90%;
+  }
+
+  .search-form {
+    width: 90%;
+  }
+}

@@ -5,11 +5,15 @@ const Nav = () => {
   return (
     <nav>
       <ul>
-        <Link to="/">
-          <li>Search Movie</li>
+        <Link className="nav-link" id="favorites" to="/">
+          <li>
+            <h2>Search Movie</h2>
+          </li>
         </Link>
-        <Link to="/my-favorites">
-          <li>Favorites</li>
+        <Link className="nav-link" id="search-movie" to="/my-favorites">
+          <li>
+            <h2>Favorites</h2>
+          </li>
         </Link>
       </ul>
     </nav>
