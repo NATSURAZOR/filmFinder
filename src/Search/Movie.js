@@ -11,12 +11,12 @@ const Movie = ({ itemID, title, year, image }) => {
       <div className="one-movie">
         <div className="movie-info">
           <div className="image-container">
-            <img src={image} alt="" />
+            <img id="movie-img" src={image} alt="" />
           </div>
 
           <div className="title-year-container">
-            <h1>{title}</h1>
-            <p>{year}</p>
+            <h1 id="movie-title">{title}</h1>
+            <p id="movie-year">{year}</p>
           </div>
         </div>
       </div>

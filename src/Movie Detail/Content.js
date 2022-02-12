@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../Favorites/GlobalState";
 import { MovieControls } from "../Favorites/MovieControls";
 import { AllDetails } from "./ContentDetail";
+import { AiFillHeart } from "react-icons/ai";
 
 const Content = ({ movieData }) => {
   const { addMovieToFavorites, favorites } = useContext(GlobalContext);
@@ -17,19 +18,27 @@ const Content = ({ movieData }) => {
     <div>
       <header>
         <h1>{title}</h1>
-        <button
-          className="movie-detail-button"
-          disabled={favoritesDisabled}
-          onClick={() => addMovieToFavorites(movieData)}
-        >
-          &#9825;
-        </button>
-        <MovieControls disabled={!favoritesDisabled} movie={movieData} />
+        <div className="movie-buttons">
+          <button
+            className="movie-detail-button"
+            disabled={favoritesDisabled}
+            onClick={() => addMovieToFavorites(movieData)}
+          >
+            <AiFillHeart />
+          </button>
+          <MovieControls
+            className="q1"
+            disabled={!favoritesDisabled}
+            movie={movieData}
+          />
+        </div>
       </header>
-      <div className="movie-detal-image-section">
-        <img src={poster} alt="" />
+      <div className="movie-information">
+        <div className="movie-detail-image-section">
+          <img src={poster} alt="" />
+        </div>
+        <AllDetails key={"details"} movieData={movieData} />
       </div>
-      <AllDetails key={"details"} movieData={movieData} />
     </div>
   );
 };

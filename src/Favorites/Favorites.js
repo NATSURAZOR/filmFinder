@@ -10,7 +10,7 @@ export const Favorite = () => {
     <div className="search">
       <h1 className="fav-h1">Your Favorite movies</h1>
       {favorites.length > 0 ? (
-        <div className="movies">
+        <div className="movies-fav">
           {favorites.map((movie) => (
             <div className="fav-movie" key={movie.imdbID}>
               <Movie

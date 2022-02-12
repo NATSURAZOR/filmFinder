@@ -4,7 +4,7 @@ export const Detail = ({ movieData, element }) => {
   return (
     <div className="movie-detail-key-and-value">
       <div className="movie-detail-key">
-        <p>{`${element}`}</p>
+        <p>{`${element}`}:</p>
       </div>
       <div className="movie-detail-value">
         <p>{`${movieData[element]}`}</p>
@@ -17,9 +17,9 @@ export const DetailWithObject = ({ movieData, element }) => {
   return (
     <div className="movie-detail-key-and-value">
       <div className="movie-detail-key">
-        <p>{`${element}`}</p>
+        <p>{`${element}`}:</p>
       </div>
-      <div className="movie-detail-value-ratings">
+      <div className="movie-detail-value">
         {movieData[`${element}`].map((rating, index) => (
           <div key={rating + index}>
             {`${rating.Source}`}: {rating.Value} <br />
