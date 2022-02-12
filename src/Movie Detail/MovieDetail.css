@@ -1,0 +1,71 @@
+.movie-detail {
+  width: 50%;
+  margin: auto;
+}
+
+.movie-detail header {
+  display: flex;
+  min-height: 9vh;
+  align-items: center;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+}
+
+.movie-detail h1 {
+  width: 90%;
+}
+
+.movie-buttons {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-detail-button {
+  border: none;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 2.3rem;
+}
+
+.movie-detail-button:hover {
+  color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-0.2rem);
+}
+
+.movie-information {
+  display: flex;
+  padding-top: 1.5rem;
+}
+
+.movie-detail-image-section {
+  width: 26%;
+}
+
+.movie-detail-image-section img {
+  width: 100%;
+}
+
+.movie-detal-about-section {
+  padding-left: 1.5rem;
+  width: 74%;
+}
+
+.movie-detail-key-and-value {
+  display: flex;
+  padding: 0.2rem;
+}
+
+.movie-detail-key,
+.movie-detail-value {
+  font-size: 1.2rem;
+}
+
+.movie-detail-key {
+  width: 45%;
+  font-weight: bold;
+}
+
+.movie-detail-value {
+  width: 55%;
+}

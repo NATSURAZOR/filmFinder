@@ -1,0 +1,30 @@
+@media screen and (max-width: 700px) {
+  .movie-detail {
+    width: 90%;
+  }
+
+  .movie-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-detail-image-section {
+    width: 100%;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+  }
+
+  .movie-detail-image-section img {
+    width: 100%;
+  }
+
+  .movie-detal-about-section {
+    padding-top: 3rem;
+    width: 100%;
+  }
+
+  .movie-detail-key,
+  .movie-detail-value {
+    font-size: 1.8rem;
+  }
+}

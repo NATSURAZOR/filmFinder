@@ -3,11 +3,11 @@ import Nav from "./Nav/Nav";
 import Home from "./Search/FindMovie";
 import Detail from "./Movie Detail/MovieDetail";
 import Favorite from "./Favorites/Favorites";
-import "./App.css";
 import "./Nav/Nav.css";
-import "./Movie Detail/MovieDetail.css";
 import "./Search/Search.css";
 import "./Search/SearchMediaQuery.css";
+import "./Movie Detail/MovieDetail.css";
+import "./Movie Detail/MovieDetaicMediaQuery.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalProvider } from "./Favorites/GlobalState";
 
