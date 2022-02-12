@@ -3,6 +3,7 @@ import Movie from "./Movie";
 import Pagination from "./Pagination";
 import { FaSearch } from "react-icons/fa";
 
+
 const result = (movies) => {
   try {
     return (
