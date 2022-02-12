@@ -1,13 +1,31 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import Nav from "./Nav/Nav";
+import Home from "./Search/FindMovie";
+import Detail from "./Movie Detail/MovieDetail";
+import Favorite from "./Favorites/Favorites";
 import "./App.css";
+import "./Nav/Nav.css";
+import "./Movie Detail/MovieDetail.css";
+import "./Search/Search.css";
+import "./Search/SearchMediaQuery.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { GlobalProvider } from "./Favorites/GlobalState";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1>Hello React</h1>
-    </div>
+    <GlobalProvider>
+      <div className="App">
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:id" element={<Detail />} />
+            <Route path="/my-favorites" element={<Favorite />} />
+          </Routes>
+        </Router>
+      </div>
+    </GlobalProvider>
   );
-};
+}
 
 export default App;
