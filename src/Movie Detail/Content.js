@@ -19,13 +19,24 @@ const Content = ({ movieData }) => {
       <header>
         <h1>{title}</h1>
         <div className="movie-buttons">
-          <button
-            className="movie-detail-button"
-            disabled={favoritesDisabled}
-            onClick={() => addMovieToFavorites(movieData)}
-          >
-            <AiFillHeart />
-          </button>
+          {favoritesDisabled ? (
+            <button
+              className="movie-detail-button-active"
+              disabled={favoritesDisabled}
+              onClick={() => addMovieToFavorites(movieData)}
+            >
+              <AiFillHeart />
+            </button>
+          ) : (
+            <button
+              className="movie-detail-button"
+              disabled={favoritesDisabled}
+              onClick={() => addMovieToFavorites(movieData)}
+            >
+              <AiFillHeart />
+            </button>
+          )}
+
           <MovieControls
             className="q1"
             disabled={!favoritesDisabled}
