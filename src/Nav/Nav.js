@@ -5,7 +5,6 @@ const Nav = () => {
   return (
     <nav>
       <ul>
-<<<<<<< HEAD
         <Link className="nav-link" id="favorites" to="/">
           <li>
             <h2>Search Movie</h2>
@@ -15,13 +14,6 @@ const Nav = () => {
           <li>
             <h2>Favorites</h2>
           </li>
-=======
-        <Link to="/">
-          <li>Search Movie</li>
-        </Link>
-        <Link to="/my-favorites">
-          <li>Favorites</li>
->>>>>>> 4d1a88e00d4db9fa2409577686fc512ce0922ffc
         </Link>
       </ul>
     </nav>

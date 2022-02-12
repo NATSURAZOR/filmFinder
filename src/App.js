@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "./Nav/Nav";
 import Home from "./Search/FindMovie";
-<<<<<<< HEAD
 import Detail from "./Movie Detail/MovieDetail";
 import Favorite from "./Favorites/Favorites";
 import "./App.css";
@@ -9,12 +8,6 @@ import "./Nav/Nav.css";
 import "./Movie Detail/MovieDetail.css";
 import "./Search/Search.css";
 import "./Search/SearchMediaQuery.css";
-=======
-import Detail from "./Movie Detail/MoiveDetail";
-import Favorite from "./Favorites/Favorites";
-import "./App.css";
-import "./Nav/Nav.css";
->>>>>>> 4d1a88e00d4db9fa2409577686fc512ce0922ffc
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalProvider } from "./Favorites/GlobalState";
 

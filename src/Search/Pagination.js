@@ -21,11 +21,8 @@ const Pagination = ({
           <button
             disabled={currentPage - 1 <= 0 ? true : false}
             onClick={() => paginate(currentPage - 1)}
-<<<<<<< HEAD
+
             className="prev-page page-button"
-=======
-            className="prev-page"
->>>>>>> 4d1a88e00d4db9fa2409577686fc512ce0922ffc
           >
             &#171;
           </button>
@@ -40,11 +37,7 @@ const Pagination = ({
           <button
             disabled={currentPage + 1 > totalPages}
             onClick={() => paginate(currentPage + 1)}
-<<<<<<< HEAD
             className="next-page page-button"
-=======
-            className="next-page"
->>>>>>> 4d1a88e00d4db9fa2409577686fc512ce0922ffc
           >
             &#187;
           </button>
