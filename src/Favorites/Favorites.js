@@ -8,7 +8,7 @@ export const Favorite = () => {
 
   return (
     <div className="search">
-      <h1 className="fav-h1">Your Favorite movies</h1>
+      <h1 className="fav-h1">Your Favorite Movies</h1>
       {favorites.length > 0 ? (
         <div className="movies-fav">
           {favorites.map((movie) => (
